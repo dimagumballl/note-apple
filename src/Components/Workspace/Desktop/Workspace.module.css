@@ -1,0 +1,13 @@
+.Workspace{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+}
+.Workspace>textarea{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: xx-large;
+    resize: none; 
+}

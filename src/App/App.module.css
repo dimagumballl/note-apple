@@ -1,0 +1,14 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+}
+.App{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    background-color: beige;
+}

@@ -1,0 +1,7 @@
+.Button{
+    width: 30px;
+    height: 25px;
+    box-shadow: 2px;
+    background-color: whitesmoke;
+    border-radius: 2px;
+}
