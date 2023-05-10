@@ -5,7 +5,7 @@ function Sidebar(props) {
     return (
       <div className={Style.Sidebar} style={{display:props.OpenBar?"none":"flex"}}>
           <ListItem
-            
+            Search={props.Search}
             setOpenBar={props.setOpenBar}
             item={props.item}
           />

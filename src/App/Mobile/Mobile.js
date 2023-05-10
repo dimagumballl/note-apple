@@ -8,7 +8,7 @@ import { connect } from 'react-redux';
 
 function Mobile(props) {
 
-    const [OpenBar, setOpenBar] = useState(false);
+    const [OpenBar, setOpenBar] = useState(Object.keys(props.item).length!=0?false:true);
     function OpenBarF() {
         setOpenBar(!OpenBar)
     }
@@ -19,8 +19,10 @@ function Mobile(props) {
     return (
       <div className={Style.Mobile}>
             <TopBar 
+                IdWorkspace={props.IdWorkspace}
                 OpenBar={OpenBar}
                 setOpenBar={OpenBarF}
+                setIdWorkspace={props.setIdWorkspace}
             />
             <Sidebar
                 item={props.item}
@@ -29,6 +31,7 @@ function Mobile(props) {
             />
             <div className={Style.Mobile_100} style={{display:!OpenBar?"none":"flex"}}>
                 <Workspace
+                    setIdWorkspace={props.setIdWorkspace}
                     IdWorkspace={props.IdWorkspace}
                 />
                 

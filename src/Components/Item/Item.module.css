@@ -1,8 +1,39 @@
 .Item{
     width: 95%;
     height: 60px;
-    background-color: green;
+    background-color: rgba(0, 128, 0, 0.5);
     margin: auto;
     margin-top: 5px;
     border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+.Title{
+    margin-left: 5px;
+    width: 90%;
+    height: 50%;
+    display: flex; 
+    align-items: center;
+    overflow: hidden;
+}
+.Title>input{
+    width: 100%;
+    font-weight: bold;
+    text-overflow:ellipsis;
+    overflow: hidden;
+    font-size: large;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0);
+    outline: none;
+    border: none;
+    cursor: auto;
+}
+.Date{
+    margin-left: 5px;
+    width: 90%;
+    height: 50%;
+    display: flex; 
+    align-items: center; 
+    font-family: Arial, Helvetica, sans-serif;
 }

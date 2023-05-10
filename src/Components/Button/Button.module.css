@@ -4,4 +4,12 @@
     box-shadow: 2px;
     background-color: whitesmoke;
     border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.Button>img{
+    width: 50%;
+    height: 50%;
 }

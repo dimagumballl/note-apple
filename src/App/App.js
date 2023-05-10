@@ -1,5 +1,5 @@
 import Desktop from "./Desktop/Desktop";
-import Style from './App.module.css'
+import Style from '../style/style.module.css'
 import Mobile from "./Mobile/Mobile";
 import { connect } from 'react-redux';
 
@@ -49,7 +49,8 @@ function useMediaQuery(query) {
 
 
 function App(props) {
-  const [IdWorkspace, setIdWorkspace] = useState(Object.keys(props.item)[0]);
+  const [IdWorkspace, setIdWorkspace] = useState(Object.keys(props.item).length!=0?Object.keys(props.item)[0]:"ANY_NOTE");
+  const [Search, setSearch] = useState("")
   const matches = useMediaQuery('(min-width: 768px)')
   return (
     <div className={Style.App}>
@@ -58,11 +59,15 @@ function App(props) {
         matches?<Desktop
           setIdWorkspace={setIdWorkspace}
           IdWorkspace={IdWorkspace}
+          setSearch={setSearch}
+          Search={Search}
         />:
         <Mobile
       
           setIdWorkspace={setIdWorkspace}
           IdWorkspace={IdWorkspace}
+          setSearch={setSearch}
+          Search={Search}
       
         />
       }

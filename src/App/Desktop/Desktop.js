@@ -8,24 +8,30 @@ import { connect } from 'react-redux';
 function Desktop(props) {
 
   function NewOption (id){
-    console.log(id)
+
     props.setIdWorkspace(id)
   }
 
     return (
       <div className={Style.Desktop}>
 
-          <TopBar/>
+          <TopBar
+            IdWorkspace={props.IdWorkspace}
+            NewOption={NewOption}
+            setSearch={props.setSearch}
+            Search={props.Search}
+          />
           <div className={Style.Desktop_workspace}>
             <div className={Style.Desktop_30}>
               <Sidebar
                 NewOption={NewOption}
                 item={props.item}
+                
               />
             </div>
             <div className={Style.Desktop_70}>
               <Workspace
-                
+                setIdWorkspace={NewOption}
                 IdWorkspace={props.IdWorkspace}
               />
             </div>

@@ -9,5 +9,8 @@
     height: 100%;
     text-decoration: none;
     font-size: xx-large;
-    resize: none; 
+    resize: none;
+    outline: none;
+    border: none;
+    border: solid 1px #f2f2f2;
 }

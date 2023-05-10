@@ -1,16 +1,35 @@
+
+
 const initialState = {
-    0:{
-        id: 0,
-        data: "",
-        text:"0fjkdfkdjfkjdfkjdfkjdkfjdssfgsfgsdfsdf",
-    },
-    1:{
-        id: 1,
-        data: "",
-        text:"1dsgdsfadfvsfgsfgsfvsfvsfvsfvsvdvvsdv",
-    }
+
   };
   
-  export function itemReducer(state = initialState) {
-    return state;
+  export function itemReducer(state = initialState, action) {
+
+    switch (action.type) {
+      case 'SET_TEXT':
+        return { ...state, 
+          [action.payload.id]:{
+            ...state[action.payload.id],
+            text: action.payload.text
+          }
+           };
+      case 'ADD_ITEM':
+        
+        return { ...state, 
+          [action.payload.id]:{
+            id:action.payload.id,
+            date:action.payload.date,
+            text:action.payload.text
+          }
+           };
+         case 'DELETE_ITEM':
+          
+          return {
+            ...action.payload
+          };
+             
+      default:
+        return state;
+    }
   }

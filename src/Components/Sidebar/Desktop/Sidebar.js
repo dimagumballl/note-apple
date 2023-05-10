@@ -5,6 +5,7 @@ function Sidebar( props) {
     return (
       <div className={Style.Sidebar}>
           <ListItem
+            Search={props.Search}
             setOpenBar={props.NewOption}
             item={props.item}
           />
