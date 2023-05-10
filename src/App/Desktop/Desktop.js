@@ -24,6 +24,7 @@ function Desktop(props) {
           <div className={Style.Desktop_workspace}>
             <div className={Style.Desktop_30}>
               <Sidebar
+                Search={props.Search}
                 NewOption={NewOption}
                 item={props.item}
                 

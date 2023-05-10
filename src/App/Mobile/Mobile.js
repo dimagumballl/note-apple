@@ -23,8 +23,10 @@ function Mobile(props) {
                 OpenBar={OpenBar}
                 setOpenBar={OpenBarF}
                 setIdWorkspace={props.setIdWorkspace}
+                setSearch={props.setSearch}
             />
             <Sidebar
+              Search={props.Search}
                 item={props.item}
                 OpenBar={OpenBar} 
                setOpenBar={OpenSideBarF} 
