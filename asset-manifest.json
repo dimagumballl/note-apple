@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/note-apple/static/css/main.19d8996a.css",
+    "main.js": "/note-apple/static/js/main.a3d8d54c.js",
+    "static/js/787.52d7f71f.chunk.js": "/note-apple/static/js/787.52d7f71f.chunk.js",
+    "index.html": "/note-apple/index.html",
+    "main.19d8996a.css.map": "/note-apple/static/css/main.19d8996a.css.map",
+    "main.a3d8d54c.js.map": "/note-apple/static/js/main.a3d8d54c.js.map",
+    "787.52d7f71f.chunk.js.map": "/note-apple/static/js/787.52d7f71f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.19d8996a.css",
+    "static/js/main.a3d8d54c.js"
+  ]
+}
