@@ -2,13 +2,13 @@
 import axios from 'axios'
 
 
-const urlGetAll = "https://quintadb.com.ua/apps/bdqbyJW5npW40HWQrsuqvb/dtypes/entity/b0E8kkh8jcWPnvDCoyWRH0.json?rest_api_key=cegGL2WPrpgk_cNCkrmCow"
-const urlAddItem = "https://quintadb.com.ua/apps/bdqbyJW5npW40HWQrsuqvb/dtypes.json?rest_api_key=cegGL2WPrpgk_cNCkrmCow"
+const urlGetAll = "https://quintadb.com.ua/apps/a1WQFcVeLltiu3WRbCW6q1/dtypes/entity/aLhConWRXcN4kfE8o8tfX5.json?rest_api_key=aZW5jNW4jcT7HaW5tcGmoP"
+const urlAddItem = "https://quintadb.com.ua/apps/a1WQFcVeLltiu3WRbCW6q1/dtypes.json?rest_api_key=aZW5jNW4jcT7HaW5tcGmoP"
 
-const entity_id = "b0E8kkh8jcWPnvDCoyWRH0"
-const date_id = "bZg8oiW4vhWRjvWP_cT1vX"
-const  text_id = "c4WOFcJCjfxOa3tvmct8ot"
-const rest_api_key = "AcegGL2WPrpgk_cNCkrmCow"
+const entity_id = "aLhConWRXcN4kfE8o8tfX5"
+const date_id = "cIlSkUW4XcWRtcKSk6hSk7"
+const  text_id = "dcNmolySniryoSs0lcVNWy"
+const rest_api_key = "aZW5jNW4jcT7HaW5tcGmoP"
 
 
 export function GetAllState() {
@@ -16,6 +16,8 @@ export function GetAllState() {
   return async function (dispatch) {
     
     
+
+
     const response = await axios.get(urlGetAll)
     .catch(function (error) {
       dispatch({
@@ -118,7 +120,7 @@ export function AddItem(item) {
 export function setText(text) {
   return async function(dispatch){
 
-    const urlChangeText = "https://quintadb.com.ua/apps/bdqbyJW5npW40HWQrsuqvb/dtypes/"+text.id+".json?rest_api_key=cegGL2WPrpgk_cNCkrmCow"
+    const urlChangeText = "https://quintadb.com.ua/apps/a1WQFcVeLltiu3WRbCW6q1/dtypes/"+text.id+".json?rest_api_key=aZW5jNW4jcT7HaW5tcGmoP"
     const response = await axios.put(urlChangeText,{
       "rest_api_key":rest_api_key,
       "values":{
@@ -160,7 +162,7 @@ export function setText(text) {
 
   export function DeleteItem(id) {
     return async function(dispatch){
-      const urlDeleteItem = "https://quintadb.com.ua/apps/bdqbyJW5npW40HWQrsuqvb/dtypes/"+id+".json?rest_api_key=cegGL2WPrpgk_cNCkrmCow"
+      const urlDeleteItem = "https://quintadb.com.ua/apps/a1WQFcVeLltiu3WRbCW6q1/dtypes/"+id+".json?rest_api_key=aZW5jNW4jcT7HaW5tcGmoP"
       const response = await axios.delete(urlDeleteItem, {"rest_api_key":rest_api_key})
       .catch(function (error) {
         dispatch({
