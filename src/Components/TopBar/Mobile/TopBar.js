@@ -3,7 +3,7 @@ import MenuBar from "../../MenuBar/Mobile/MenuBar";
 import SearchBox from "../../SearchBox/SearchBox";
 import Button from "../../Button/Button";
 import addImage from '../../../style/image/add.png'
-import downImage from '../../../style/image/down.png'
+
 import { connect } from 'react-redux';
 import {AddItem, DeleteItem} from "../../../action/ItemAction"
 
@@ -58,10 +58,7 @@ function TopBar(props) {
                   Fun={disableAddItem}
 
                 />
-                <Button
-                  image={downImage}
-                
-                />
+
                 <SearchBox
                   setSearch={props.setSearch}
                   Search={props.Search}

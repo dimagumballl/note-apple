@@ -2,7 +2,7 @@ import Style from "./MenuBar.module.css"
 import Button from "../../Button/Button"
 import deleteImage from '../../../style/image/delete.png'
 import addImage from '../../../style/image/add.png'
-import downImage from '../../../style/image/down.png'
+
 import { connect } from 'react-redux';
 import {AddItem, DeleteItem} from "../../../action/ItemAction"
 import {GetAllState} from '../../../action/ItemAction'
@@ -70,10 +70,7 @@ function MenuBar( props) {
             image={deleteImage}
             Fun={disableDeleteItem}
           />
-          <Button
 
-            image={downImage}
-          />
       </div>
     );
   }
