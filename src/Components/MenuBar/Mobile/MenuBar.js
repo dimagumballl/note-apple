@@ -8,6 +8,7 @@ import { DeleteItem} from "../../../action/ItemAction"
 function MenuBar( props) {
 
   function disableDeleteItem(){
+
     if(Object.keys(props.item).length!=0){
       let CopyObject = {}
       for(const property in props.item){
@@ -19,7 +20,7 @@ function MenuBar( props) {
           }
         }
       }
-      props.DeleteItemAction(CopyObject)
+      props.DeleteItemAction(props.IdWorkspace)
       props.setOpenBar()
       
       if(Object.keys(CopyObject).length!=0){

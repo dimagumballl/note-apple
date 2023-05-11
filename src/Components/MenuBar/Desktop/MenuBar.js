@@ -5,6 +5,7 @@ import addImage from '../../../style/image/add.png'
 import downImage from '../../../style/image/down.png'
 import { connect } from 'react-redux';
 import {AddItem, DeleteItem} from "../../../action/ItemAction"
+import {GetAllState} from '../../../action/ItemAction'
 
 function MenuBar( props) {
 
@@ -51,12 +52,14 @@ function MenuBar( props) {
           }
         }
       }
-        props.DeleteItemAction(CopyObject)
+        props.DeleteItemAction(props.IdWorkspace)
         if(Object.keys(CopyObject).length!=0){
           props.NewOption(Object.keys(CopyObject)[0])
         }
     }
     
+
+ 
     return (
       <div className={Style.MenuBar}>
           <Button
@@ -68,7 +71,7 @@ function MenuBar( props) {
             Fun={disableDeleteItem}
           />
           <Button
-          
+
             image={downImage}
           />
       </div>
@@ -79,12 +82,12 @@ function MenuBar( props) {
 
     return {
       item: store.item,
-  
     };
   };
 
   const mapDispatchToProps = (dispatch) => {
     return {
+      GetAllState:()=>dispatch(GetAllState()),
       AddItemAction: (item) => dispatch(AddItem(item)), 
       DeleteItemAction: (id) => dispatch(DeleteItem(id)),
     };

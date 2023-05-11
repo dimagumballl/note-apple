@@ -7,6 +7,13 @@ const initialState = {
   export function itemReducer(state = initialState, action) {
 
     switch (action.type) {
+      case "SET_ALL_STATE":
+
+         
+            return {
+                ...action.payload
+            };
+
       case 'SET_TEXT':
         return { ...state, 
           [action.payload.id]:{
@@ -14,6 +21,7 @@ const initialState = {
             text: action.payload.text
           }
            };
+
       case 'ADD_ITEM':
         
         return { ...state, 
@@ -33,3 +41,4 @@ const initialState = {
         return state;
     }
   }
+
