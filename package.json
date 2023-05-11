@@ -1,6 +1,7 @@
 {
   "name": "note-apple",
   "version": "0.1.0",
+  "homepage": "https://dimagumballl.github.io/note-apple",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
@@ -21,6 +22,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +46,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "redux-logger": "^3.0.6"
   }
 }
